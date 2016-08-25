@@ -181,10 +181,11 @@ function fruitful_wp_title( $title, $sep ) {
  *
  * @since Fruitful theme 1.0
  */
+
  if ( ! function_exists( 'fruitful_widgets_init' ) ) {
 function fruitful_widgets_init() {
 	register_widget( 'Fruitful_Widget_News_Archive' );
-	
+
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'fruitful' ),
 		'id' => 'sidebar-1',
@@ -243,6 +244,8 @@ function fruitful_widgets_init() {
 }
 
 add_action( 'widgets_init', 'fruitful_widgets_init' );
+add_action('widgets_init', create_function('', 'return register_widget("my_plugin");'));
+
 }
 
 /**
@@ -2006,4 +2009,5 @@ if (class_exists('Woocommerce')) {
 	}
 
 	add_action(	'wp_enqueue_scripts', 'fruitful_init_woo_styles', 100);
+
 }
