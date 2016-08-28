@@ -12,3 +12,47 @@
 .text-center{
 	text-align: center;
 }
+.header-container{
+	position: relative;
+    height: 70vh;
+    width: 100%;
+    background-color: #16a085;
+    opacity: 1;
+	z-index: 10;
+}
+.title-center{
+	display: inline-table;
+    width: 100%;
+    height: 100%;
+}
+.header-title{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.header-title{
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	font-size: 100px;
+	text-shadow: (rgba(0, 0, 0, 0.2) 10px 10px 0px);
+}
+.header-title span{
+	width: 20px;
+}
+#center {
+	position: absolute;
+	top: 15%;
+	left: 0;
+	right: 0;
+    width: 50%;
+    margin: 0 auto;
+	z-index: -1;
+	
+}
+#center img{
+	display: block;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}

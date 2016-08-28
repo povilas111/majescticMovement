@@ -245,6 +245,15 @@ function fruitful_widgets_init() {
 
 add_action( 'widgets_init', 'fruitful_widgets_init' );
 add_action('widgets_init', create_function('', 'return register_widget("my_plugin");'));
+add_action('widgets_init', create_function('', 'return register_widget("header_plugin");'));
+wp_enqueue_script( 'my-great-script', get_template_directory_uri() . '/js/header.js', array( 'jquery' ), '1.0.0', true );
+
+add_action('load-widget.php', 'my_custom_load');
+function my_custom_load(){
+	wp_enqueue_style('wp-color-picker');
+	wp_enqueue_script('wp-color-picker');
+
+}
 
 }
 
