@@ -1,3 +1,6 @@
+.entry-content{
+	margin:0!important;
+}
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -6,8 +9,11 @@
 	display: block;
 	margin-left: auto;
     margin-right: auto;
-	max-width: 170;
+	max-width: 170px;
     max-height: 120px;
+}
+.head-container{
+	opacity: .9;
 }
 .text-center{
 	text-align: center;
@@ -19,6 +25,7 @@
     background-color: #16a085;
     opacity: 1;
 	z-index: 10;
+	top: -41px;
 }
 .title-center{
 	display: inline-table;
@@ -29,6 +36,7 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+	padding-top: 140px;
 }
 .header-title{
 	font-weight: bold;
@@ -52,9 +60,97 @@
 }
 #center img{
 	display: block;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+	max-width: 120px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+.h1-container {
+	width: 500px;
+	margin: 0 auto;
+}
+.h1-container h1{
+	font-weight: 400;
+	line-height: 30px!important;
+	font-family: 'Raleway', sans-serif;
+}
+.page-container{
+	margin:0;
+}
+div#page {
+	margin-top: 0!important;
+}
+.logo{
+	-webkit-filter: invert(100%);
+}
+.moving-text{
+	font-family: 'Raleway';
+	padding-right: 15px;
+	text-transform: uppercase;
+}
+.section-2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+.dekoracija {
+	max-width: 780px;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+}
+.line-left {
+	width: 250px;
+	background: #383a35;
+	height: 5px;
+}
+.line-right {
+	width: 250px;
+	background: #383a35;
+	height: 5px;
+}
+h2 {
+	font-size: 40px;
+	font-weight: 700!important;
+	color: #383a35;
+	margin: 0;
+	text-align: center;
+}
+.about-us {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 100;
+	color: #383a35;
+	text-align: center;
+	width: 510px;
+	margin: 20px 0 40px;
+	line-height: 30px;
+}
+.more-info {
+	background: transparent!important;
+	border: 2px solid #50E3C2;
+	border-radius: 20px;
+	width: 100px;
+	height: 40px;
+	transition: .2s all ease;
+}
+.more-info a{
+	text-decoration: none;
+	color: #383a35;
+}
+.more-info:hover{
+	background-color: #50E3C2!important;
+
+<<<<<<< Updated upstream
+}
+.more-info:hover a{
+	color: #000000;
 }
 .text-center{
 	text-align: center;
@@ -63,4 +159,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+=======
+}
+.more-info:hover a{
+	color: #000000;
+>>>>>>> Stashed changes
 }

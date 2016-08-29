@@ -113,8 +113,10 @@ function widget($args, $instance) {
 						echo '<span class="moving-text">'.$instance['title'][$i].'</span>';
 						}
 					?>
-					<h1><?php echo $instance['title_caption']; ?></h1>
-					</div>
+					<div class="h1-container">
+						<h1><?php echo $instance['title_caption']; ?></h1>
+					</div>	
+				</div>
 			</div>
 				<div class="hero-image">
 					<div id="center">
