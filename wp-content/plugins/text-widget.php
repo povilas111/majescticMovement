@@ -88,16 +88,16 @@ function widget($args, $instance) {
 		} ?>
 			<div class='row'>
 				<div class="col-sm-8 col-md-11 col-lg-9 col-centered">
-					<h2 class="text-center"><?php echo $instance['title']?></h2>
+					<h2 class="text-center text-decoration"><?php echo $instance['title']?></h2>
 				</div>	
 			</div>
 			<div class="row">
 				<div class="col-sm-7 col-md-10 col-lg-8 col-centered">
 					<h4 class="text-center"><?php echo $instance['paragraph'] ?></h4>
-					<div class="center">
+					<div class="center margin-t-20">
 						<?php
 							if ($instance['button_url'] != '' && $instance['button_text'] != '') {
-								echo '<a href="'.$instance['button_url'].'" type="button" class="btn btn-success">'.$instance['button_text'].'</a>';
+								echo '<a href="'.$instance['button_url'].'" type="button" class="btn btn-more">'.$instance['button_text'].'</a>';
 							}
 						?>					
 					</div>
