@@ -30,14 +30,15 @@ get_header( 'shop' ); ?>
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
+
 	?>
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+			<h1 class="page-title title-decoration"><?php woocommerce_page_title(); ?></h1>
 
 		<?php endif; ?>
-
+		
 		<?php
 			/**
 			 * woocommerce_archive_description hook.
@@ -47,7 +48,11 @@ get_header( 'shop' ); ?>
 			 */
 			do_action( 'woocommerce_archive_description' );
 		?>
-
+		<?php
+				echo '<div class="col-xs-2">';
+		woocommerce_product_subcategories(); 
+		echo '</div>';
+		?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -62,7 +67,7 @@ get_header( 'shop' ); ?>
 
 			<?php woocommerce_product_loop_start(); ?>
 
-				<?php woocommerce_product_subcategories(); ?>
+				
 
 				<?php while ( have_posts() ) : the_post(); ?>
 

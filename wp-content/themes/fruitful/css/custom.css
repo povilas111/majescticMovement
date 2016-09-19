@@ -257,3 +257,19 @@ td.label {
 span.woocommerce-Price-amount.amount {
     color: red;
 }
+.product-type-variable {
+	background: #fff;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	transition: .2s all ease;
+}
+.product-type-variable:hover {
+	border: 1px solid #f76200;
+}
+.summary.entry-summary {
+	width: 50%!important;
+
+}
+.woocommerce-tabs.wc-tabs-wrapper {
+	display: none;
+}

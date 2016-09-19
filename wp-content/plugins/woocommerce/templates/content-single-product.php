@@ -28,14 +28,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 *
 	 * @hooked wc_print_notices - 10
 	 */
-	 do_action( 'woocommerce_before_single_product' );
+	/* do_action( 'woocommerce_before_single_product' );*/
 
 	 if ( post_password_required() ) {
 	 	echo get_the_password_form();
 	 	return;
 	 }
-?>
 
+?>
+<h1 class="title-decoration"><?php the_title();?></h1>
+<div class="clearfix product-container">
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
@@ -75,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+	do_action( 'woocommerce_after_single_product_summary' );
 	?>
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
@@ -83,3 +85,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div><!-- #product-<?php the_ID(); ?> -->
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+	

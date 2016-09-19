@@ -19,10 +19,19 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
 global $product;
+$price = 10;
+if(get_post_meta( get_the_ID(), '_sale_price', true) != null){
+	$price = get_post_meta( get_the_ID(), '_sale_price', true);
+}
+$regular_price = get_post_meta( get_the_ID(), '_regular_price', true );
+$symbol = get_woocommerce_currency_symbol();
 ?>
+<?php 
 
-<?php if ( $price_html = $product->get_price_html() ) : ?>
-	<span class="price"><?php echo $price_html; ?></span>
-<?php endif; ?>
+	if((int)$price == 10){
+		echo '<div class="col-xs-6"><span class="price">'; echo $regular_price . " " . $symbol; echo '</span></div>';
+	}else{
+		echo '<div class="col-xs-6"><span class="price">'; echo $price . " " . $symbol; echo '</span></div>';
+	}
+?>
